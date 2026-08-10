@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>mori — 감각적인 일상의 기록</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="symbol-sprite" aria-hidden="true">
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/><path d="M9 21v-7h6v7"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 8.6c0 5-8.8 10.2-8.8 10.2S3.2 13.6 3.2 8.6A4.5 4.5 0 0 1 12 7.1a4.5 4.5 0 0 1 8.8 1.5Z"/></symbol>
+      <symbol id="i-comment" viewBox="0 0 24 24"><path d="M20.4 11.4a7.6 7.6 0 0 1-8.1 7.5 9 9 0 0 1-3.2-.8L4 20l1.7-4.2a7 7 0 0 1-1.4-4.3A7.6 7.6 0 0 1 12.1 4a7.6 7.6 0 0 1 8.3 7.4Z"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m21 3-8.5 18-3.2-7.2L3 10.7Z"/><path d="M9.3 13.8 21 3"/></symbol>
+      <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3.7A1.7 1.7 0 0 1 7.7 2h8.6A1.7 1.7 0 0 1 18 3.7V22l-6-3.8L6 22Z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.7"/><path d="M4.5 21c.6-4.1 3.1-6.2 7.5-6.2s6.9 2.1 7.5 6.2"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18.4 10.2c0-4.2-2.1-6.8-6.4-6.8s-6.4 2.6-6.4 6.8c0 5-2.2 6.3-2.2 7h17.2c0-.7-2.2-2-2.2-7Z"/><path d="M9.2 20.3c.6.6 1.5.9 2.8.9s2.2-.3 2.8-.9"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4.8 7.5h3L9.4 5h5.2l1.6 2.5h3A1.8 1.8 0 0 1 21 9.3v8.2a1.8 1.8 0 0 1-1.8 1.8H4.8A1.8 1.8 0 0 1 3 17.5V9.3a1.8 1.8 0 0 1 1.8-1.8Z"/><circle cx="12" cy="13" r="3.3"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.5 5.6L19 10l-5.5 1.4L12 17l-1.5-5.6L5 10l5.5-1.4ZM19 16l.6 2.4L22 19l-2.4.6L19 22l-.6-2.4L16 19l2.4-.6Z"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    </svg>
+
+    <div class="app">
+      <aside class="side-nav" aria-label="주 메뉴">
+        <a class="wordmark" href="#home" aria-label="mori 홈"><span class="wordmark-dot"></span>mori</a>
+        <nav class="side-links">
+          <button class="side-link active" data-view="home" aria-label="홈"><span data-icon="home"></span><b>홈</b></button>
+          <button class="side-link" data-view="explore" aria-label="탐색"><span data-icon="search"></span><b>탐색</b></button>
+          <button class="side-link compose-trigger" aria-label="새 게시물"><span data-icon="plus"></span><b>만들기</b></button>
+          <button class="side-link" data-view="activity" aria-label="알림"><span data-icon="bell"></span><b>알림</b><i class="unread"></i></button>
+          <button class="side-link" data-view="profile" aria-label="프로필"><span class="avatar tiny avatar-user">J</span><b>프로필</b></button>
+        </nav>
+        <button class="side-link settings-link" aria-label="더보기"><span data-icon="menu"></span><b>더보기</b></button>
+      </aside>
+
+      <main class="main-content">
+        <header class="mobile-topbar"><a class="wordmark" href="#home"><span class="wordmark-dot"></span>mori</a><div><button class="topbar-icon" aria-label="알림" data-view="activity"><span data-icon="heart"></span></button><button class="topbar-icon compose-trigger" aria-label="새 게시물"><span data-icon="plus"></span></button></div></header>
+
+        <section id="home" class="screen active-screen">
+          <div class="content-layout">
+            <div class="feed">
+              <header class="feed-title"><div><p>MONDAY, 10 AUGUST</p><h1>For you</h1></div><button class="filter-button">팔로잉 <span data-icon="chevron"></span></button></header>
+              <div class="story-strip" id="story-strip" aria-label="스토리"></div>
+              <div class="feed-section-label"><span>오늘의 피드</span><i></i><button>최신순 <span data-icon="chevron"></span></button></div>
+              <div id="post-list" class="post-list"></div>
+            </div>
+            <aside class="desktop-rail">
+              <div class="mini-profile"><span class="avatar avatar-user">J</span><div><b>jiyun.kim</b><small>김지윤</small></div><button>전환</button></div>
+              <div class="rail-title"><b>추천 크리에이터</b><button>모두 보기</button></div>
+              <div id="suggestions"></div>
+              <div class="rail-card"><span data-icon="sparkle"></span><div><b>취향을 더 알려주세요</b><p>관심사를 설정하면 더 좋은 피드를 추천해 드려요.</p><button>관심사 설정</button></div></div>
+              <footer>소개 · 도움말 · 개인정보처리방침<br>© 2026 MORI, INC.</footer>
+            </aside>
+          </div>
+        </section>
+
+        <section id="explore" class="screen"><div class="page"><header class="page-title"><p>DISCOVER</p><h1>새로운 취향</h1></header><label class="search-field"><span data-icon="search"></span><input id="discover-search" placeholder="사람, 태그, 장소 검색" /></label><div class="topic-chips"><button class="selected">전체</button><button>패션</button><button>공간</button><button>푸드</button><button>여행</button><button>아트</button></div><div id="explore-grid" class="explore-grid"></div></div></section>
+        <section id="activity" class="screen"><div class="page activity-page"><header class="page-title"><p>ACTIVITY</p><h1>알림</h1></header><div class="activity-group"><span class="activity-date">오늘</span><div class="activity-item"><span class="avatar avatar-rose">S</span><p><b>seoyeon</b>님이 회원님의 게시물을 좋아합니다.<small>2분 전</small></p><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7452?auto=format&fit=crop&w=160&q=80" alt="게시물 미리보기"></div><div class="activity-item"><span class="avatar avatar-ink">M</span><p><b>min.jun</b>님이 회원님을 팔로우하기 시작했습니다.<small>32분 전</small></p><button class="follow-button">팔로우</button></div></div><div class="activity-group"><span class="activity-date">이번 주</span><div class="activity-item"><span class="avatar avatar-orange">Y</span><p><b>yoonseul</b>님이 댓글을 남겼습니다.<br>“빛이 정말 예뻐요.”<small>어제</small></p><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=160&q=80" alt="게시물 미리보기"></div></div></div></section>
+        <section id="profile" class="screen"><div class="page profile-page"><header class="profile-header"><span class="avatar avatar-user profile-avatar">J</span><div class="profile-info"><div><h1>jiyun.kim</h1><button class="secondary-button">프로필 수정</button><button class="square-button"><span data-icon="more"></span></button></div><div class="stats"><b>18 <small>게시물</small></b><b>284 <small>팔로워</small></b><b>162 <small>팔로잉</small></b></div><p><b>김지윤</b><br>작고 아름다운 일상을 기록합니다. ☕</p></div></header><div class="profile-tabs"><button class="selected"><span data-icon="grid"></span>게시물</button><button><span data-icon="bookmark"></span>저장됨</button></div><div id="profile-grid" class="profile-grid"></div></div></section>
+      </main>
+    </div>
+
+    <nav class="bottom-nav" aria-label="모바일 메뉴"><button class="active" data-view="home" aria-label="홈"><span data-icon="home"></span></button><button data-view="explore" aria-label="탐색"><span data-icon="search"></span></button><button class="compose-trigger create-button" aria-label="새 게시물"><span data-icon="plus"></span></button><button data-view="activity" aria-label="알림"><span data-icon="heart"></span></button><button data-view="profile" aria-label="프로필"><span class="avatar tiny avatar-user">J</span></button></nav>
+
+    <dialog id="composer" class="composer-dialog"><form method="dialog" class="composer-card" id="post-form"><header><button class="icon-only close-composer" type="button" aria-label="닫기"><span data-icon="close"></span></button><h2>새 게시물</h2><button id="publish-post" type="submit" class="publish">공유</button></header><div class="composer-body"><div class="photo-picker"><input id="upload" type="file" accept="image/*" hidden><label for="upload" id="upload-label"><span data-icon="camera"></span><strong>사진 또는 동영상 추가</strong><small>드래그하거나 기기에서 선택하세요</small><em>사진 선택</em></label><div id="preview" class="preview hidden"></div></div><div class="composer-copy"><span class="avatar avatar-user">J</span><textarea id="caption" maxlength="2200" placeholder="무슨 생각을 하고 계신가요?"></textarea><small><span id="caption-number">0</span> / 2,200</small></div><button class="composer-option" type="button"><span>위치 추가</span><span data-icon="chevron"></span></button><button class="composer-option" type="button"><span>고급 설정</span><span data-icon="chevron"></span></button></div></form></dialog>
+    <dialog id="utility-dialog" class="utility-dialog" aria-label="기능 창"><div id="utility-content"></div></dialog>
+    <dialog id="feed-viewer" class="feed-viewer" aria-label="전체 화면 피드"><div id="viewer-track" class="viewer-track"></div></dialog>
+    <dialog id="comment-sheet" class="comment-sheet" aria-label="댓글"><div class="sheet-panel"><div class="sheet-handle"></div><header><h2>댓글</h2><button data-action="close-sheet" aria-label="닫기"><span data-icon="close"></span></button></header><div id="sheet-comments" class="sheet-comments"></div><form id="sheet-comment-form" class="sheet-comment-form"><input id="sheet-comment-input" maxlength="300" placeholder="댓글을 입력하세요" required><button type="submit">게시</button></form></div></dialog>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="assets-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
